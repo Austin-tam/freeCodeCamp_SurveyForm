@@ -27,10 +27,10 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <div id="main">
+  <main id="main">
     <h1 id="title">freeCodeCamp Survey Form Page</h1>
 
-    <p id="description"></p>
+    <p id="description">Quick survey created to gather demographic information</p>
 
     <form action="/js/main.js" id="survey-form">
       <label class="form-label" for="name" id="name-label">Name: </label>
@@ -47,27 +47,29 @@
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="pref">Prefer Not To Say</option>
-      </select>
+      </select><br>
 
-      <label class="form-label" id="education-label">Highest level of education completed</label><br>
+      <fieldset>
+        <legend>Highest level of education completed</legend><br>
 
-      <input type="radio" id="none" name="none" value="none">
-      <label for="none" id="none-label">None</label><br>
+        <input type="radio" id="none" name="none" value="none">
+        <label for="none" id="none-label">None</label><br>
 
-      <input type="radio" id="elementary" name="elementary" value="elementary">
-      <label for="elementary" id="elementary-label">Elementary school</label><br>
+        <input type="radio" id="elementary" name="elementary" value="elementary">
+        <label for="elementary" id="elementary-label">Elementary school</label><br>
 
-      <input type="radio" id="high-school" name="high-school" value="high-school">
-      <label for="high-school" id="high-school-label">High school diploma</label><br>
+        <input type="radio" id="high-school" name="high-school" value="high-school">
+        <label for="high-school" id="high-school-label">High school diploma</label><br>
 
-      <input type="radio" id="bachelor" name="bachelor" value="bachelor">
-      <label for="bachelor" id="bachelor-label">Bachelor's degree</label><br>
+        <input type="radio" id="bachelor" name="bachelor" value="bachelor">
+        <label for="bachelor" id="bachelor-label">Bachelor's degree</label><br>
 
-      <input type="radio" id="" name="" value="master">
-      <label for="" id="">Master's degree</label><br>
+        <input type="radio" id="master" name="master" value="master">
+        <label for="master" id="master-label">Master's degree</label><br>
 
-      <input type="radio" id="" name="" value="doctorate">
-      <label for="" id="">Doctorate degree</label><br><br>
+        <input type="radio" id="doctor" name="doctor" value="doctorate">
+        <label for="doctor" id="doctor-label">Doctorate degree</label><br><br>
+      </fieldset>
 
       <label class="form-label" for="comments" id="comments-label">Please provide additional comments if you have any</label><br>
       <textarea id="comments" name="comments" placeholder="Enter your comment here..."></textarea><br>
@@ -75,7 +77,7 @@
       <input type="submit" value="Submit">
     </form>
 
-  </div>
+  </main>
 </body>
 
 </html>
