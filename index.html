@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -30,54 +31,80 @@
   <main id="main">
     <h1 id="title">freeCodeCamp Survey Form Page</h1>
 
-    <p id="description">Quick survey created to gather demographic information</p>
+    <p id="description">Quick survey created to gather demographic information</p><br>
 
-    <form action="/js/main.js" id="survey-form">
-      <label class="form-label" for="name" id="name-label">Name: </label>
-      <input type="text" id="name" name="name" placeholder="Please enter your name"><br><br>
+    <form action="" id="survey-form">
+      <div class="form-group">
+        <label class="h5" for="name" id="name-label">Name</label><br>
+        <input class="form-control" type="text" id="name" name="name" placeholder="Please enter your name" required><br>
+      </div>
 
-      <label class="form-label" for="email" id="email-label">Email: </label>
-      <input type="email" id="email" name="email" placeholder="Please enter your email"><br><br>
+      <div class="form-group">
+        <label class="h5" for="email" id="email-label">Email</label><br>
+        <input class="form-control" type="email" id="email" name="email" placeholder="Please enter your email" required><br>
+      </div>
 
-      <label class="form-label" for="number" id="number-label">Age: </label>
-      <input type="number" id="number" name="number" min="1" max="150" placeholder="Please enter your age"><br><br>
+      <div class="form-group">
+        <label class="h5" for="number" id="number-label">Age</label><br>
+        <input class="form-control" type="number" id="number" name="number" min="1" max="150" placeholder="Please enter your age" required><br>
+      </div>
 
-      <label class="form-label" for="dropdown" id="dropdown-label">Sex: </label>
-      <select id="dropdown" name="sex">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="pref">Prefer Not To Say</option>
-      </select><br>
+      <div class="form-group">
+        <label class="h5" for="dropdown" id="dropdown-label">Sex</label><br>
+        <select class="form-control" id="dropdown" name="sex" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="pref">Prefer Not To Say</option>
+        </select><br>
+      </div>
 
-      <fieldset>
-        <legend>Highest level of education completed</legend><br>
+      <p class="h5">Highest level of education completed</p>
 
-        <input type="radio" id="none" name="none" value="none">
-        <label for="none" id="none-label">None</label><br>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="none" name="education" value="none">
+          <label class="form-check-label" for="none" id="none-label"> None</label><br>
+        </div>
 
-        <input type="radio" id="elementary" name="elementary" value="elementary">
-        <label for="elementary" id="elementary-label">Elementary school</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="elementary" name="education" value="elementary">
+          <label class="form-check-label" for="elementary" id="elementary-label"> Elementary school</label><br>
+        </div>
 
-        <input type="radio" id="high-school" name="high-school" value="high-school">
-        <label for="high-school" id="high-school-label">High school diploma</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="high-school" name="education" value="high-school">
+          <label class="form-check-label" for="high-school" id="high-school-label"> High school diploma</label><br>
+        </div>
 
-        <input type="radio" id="bachelor" name="bachelor" value="bachelor">
-        <label for="bachelor" id="bachelor-label">Bachelor's degree</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="bachelor" name="education" value="bachelor">
+          <label class="form-check-label" for="bachelor" id="bachelor-label"> Bachelor's degree</label><br>
+        </div>
 
-        <input type="radio" id="master" name="master" value="master">
-        <label for="master" id="master-label">Master's degree</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="master" name="education" value="master">
+          <label class="form-check-label" for="master" id="master-label"> Master's degree</label><br>
+        </div>
 
-        <input type="radio" id="doctor" name="doctor" value="doctorate">
-        <label for="doctor" id="doctor-label">Doctorate degree</label><br><br>
-      </fieldset>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="doctor" name="education" value="doctorate">
+          <label class="form-check-label" for="doctor" id="doctor-label"> Doctorate degree</label><br><br>
+        </div>
+      </div>
 
-      <label class="form-label" for="comments" id="comments-label">Please provide additional comments if you have any</label><br>
-      <textarea id="comments" name="comments" placeholder="Enter your comment here..."></textarea><br>
+      <div class="form-group">
+        <label class="h5" for="comments" id="comments-label">Please provide additional comments if you have any</label><br>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Enter your comment here..."></textarea><br>
+      </div>
 
-      <input type="submit" value="Submit">
+      <input class="btn btn-success w-100" type="submit" id="submit">
     </form>
 
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
